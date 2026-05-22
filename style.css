@@ -4,8 +4,18 @@
 }
 
 @font-face {
+  font-family: "DM Sans Light";
+  src: url("./assets/fonts/DM_Sans/static/DMSans-Light.ttf");
+}
+
+@font-face {
   font-family: "Bricolage Grotesque";
   src: url("./assets/fonts/Bricolage_Grotesque/BricolageGrotesque-VariableFont_opsz\,wdth\,wght.ttf");
+}
+
+@font-face {
+  font-family: "DM Sans Italic";
+  src: url("./assets/fonts/DM_Sans/DMSans-Italic-VariableFont_opsz\,wght.ttf");
 }
 
 * {
@@ -65,11 +75,12 @@ button {
   margin-bottom: 2rem;
 }
 
-.heroSection h1 {
+/* .heroSection h1 {
   width: 200px;
   align-self: center;
   text-align: center;
-}
+  margin: 3rem 0;
+} */
 
 .hero {
   display: flex;
@@ -91,7 +102,8 @@ button {
 .hero + h1 {
   font-size: 45px;
   text-align: center;
-  margin-bottom: 3rem;
+  margin: 2.5rem 0;
+  /* margin-bottom: 3rem; */
 }
 
 /* INPUT SECTION */
@@ -103,25 +115,30 @@ button {
 }
 
 .search input {
-  height: 40px;
+  height: 60px;
   padding: 1rem;
   background-color: hsl(243, 27%, 20%);
   color: hsl(0, 0%, 100%);
   border-radius: 10px;
   border: none;
+  outline: none;
 }
 
 .search input::placeholder {
-  color: hsl(0, 0%, 100%);
+  color: var(--Neutral-0);
+  font-weight: 900;
+  font-size: 15px;
 }
 
 .search button {
-  height: 40px;
+  /* height: 40px; */
   background-color: hsl(233, 67%, 56%);
   color: hsl(0, 0%, 100%);
   border-radius: 10px;
   border: none;
   font-weight: bold;
+  padding: 1rem;
+  font-size: 1em;
 }
 
 /* BANNER IMAGE SECTION */
@@ -136,6 +153,7 @@ button {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 2rem;
 }
 
 .banner-image {
@@ -164,6 +182,7 @@ button {
 
 .weatherDegree span {
   font-size: 70px;
+  font-family: DM Sans Italic;
 }
 
 .weatherDegreeIcon {
@@ -172,6 +191,64 @@ button {
 }
 
 /* ABOUTDAY */
-.aboutDayText {
-  position: absolute;
+
+.about-day-cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  margin-bottom: 1rem;
+}
+
+.card {
+  background-color: var(--Neutral-800);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  padding: 1rem;
+}
+
+.card p {
+  color: var(--Neutral-300);
+}
+
+.card span {
+  font-size: 24px;
+  font-family: "DM Sans Light";
+}
+
+/* WEATHER FORECAST */
+
+.weather-forecast p {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.forecast-card-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.forecast-card {
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--Neutral-800);
+  border-radius: 10px;
+  padding: 1rem;
+}
+
+.forecast-icon {
+  width: 50px;
+  height: 50px;
+  /* margin-bottom: 1rem; */
+}
+
+.degree {
+  display: flex;
+  /* justify-content: space-between; */
+  gap: 20px;
 }
